@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Estilo global para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Estilos para el body */
+body {
+  background: url('./assets/fan-art-red-dead-redemption-2-artworks-wallpaper-nd7nqdmdbfkbklbr.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  font-size: 16px; /* Fuente base para todos los textos */
+  color: #fff; /* Color de texto blanco por defecto */
+}
+
+/* Estilos para enlaces */
+a {
+  text-decoration: none;
+  color: inherit; /* Los enlaces toman el color del texto normal */
+}
+
+/* Estilos adicionales para hacer la web más responsiva */
+
+/* Ajustes para pantallas grandes (escritorios) */
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 14px; /* Ajuste de fuente para pantallas de tabletas */
+  }
+}
+
+/* Ajustes para pantallas medianas (tabletas en posición vertical) */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px; /* Ajuste de fuente para pantallas de móviles */
+  }
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 11px; /* Ajuste de fuente para móviles pequeños */
+    padding: 10px; /* Añadir un poco de padding para evitar que el contenido se pegue a los bordes */
+  }
+}

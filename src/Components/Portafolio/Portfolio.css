@@ -1,0 +1,66 @@
+/* src/Components/Portfolio/Portfolio.css */
+.portfolio-page {
+  padding: 50px;
+  text-align: left; /* Alinea todo el contenido a la izquierda */
+}
+
+/* Título de la página Portfolio */
+.portfolio-page h1 {
+  font-size: 48px; /* Hacer el título más grande */
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Descripción de la página Portfolio */
+.portfolio-page p {
+  font-size: 20px; /* Hacer la descripción más grande */
+  color: white;
+}
+
+/* Estilo de los enlaces */
+.portfolio-page a {
+  color: white; /* Color por defecto de los enlaces */
+  font-size: 18px; /* Aumentar el tamaño de los enlaces */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Agregar transición suave al cambio de color */
+}
+
+/* Efecto de cambio de color al pasar el mouse sobre los enlaces */
+.portfolio-page a:hover {
+  color: red; /* Cambiar el color a rojo cuando el mouse pasa sobre el enlace */
+}
+
+/* Media Queries para hacer la sección más responsiva */
+@media screen and (max-width: 1024px) {
+  .portfolio-page h1 {
+      font-size: 36px; /* Ajusta el tamaño del título en pantallas de tabletas */
+  }
+
+  .portfolio-page p {
+      font-size: 18px; /* Ajusta el tamaño del texto en pantallas de tabletas */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-page h1 {
+      font-size: 30px; /* Ajusta el tamaño del título en pantallas de móviles grandes */
+  }
+
+  .portfolio-page p {
+      font-size: 16px; /* Ajusta el tamaño del texto en pantallas de móviles grandes */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio-page h1 {
+      font-size: 24px; /* Ajusta el tamaño del título en móviles pequeños */
+  }
+
+  .portfolio-page p {
+      font-size: 14px; /* Ajusta el tamaño del texto en móviles pequeños */
+  }
+
+  .portfolio-page {
+      padding: 20px; /* Reducir el padding en pantallas muy pequeñas */
+  }
+}

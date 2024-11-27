@@ -1,0 +1,196 @@
+/* Estilos generales para el navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease;
+}
+
+/* Establecer una altura fija para el navbar */
+.header {
+    height: 70px; /* Ajusta esta altura según el tamaño de tu navbar */
+}
+
+/* Añadir padding-top a los contenedores principales para evitar que el contenido se sobreponga */
+body {
+    padding-top: 70px; /* La misma altura que el navbar */
+}
+
+.main-content {
+    padding-top: 70px; /* Ajustar según la altura de tu navbar */
+}
+
+/* Navbar: transiciones de color y efecto de fondo */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+/* Nueva clase para el logo dentro del Navbar */
+.navbar-logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+/* Añadir efectos hover para el navbar */
+.navbar a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* Botón de Login */
+.login-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Modal de Login */
+.login-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8); /* Escalado inicial */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    opacity: 0; /* Oculto inicialmente */
+    visibility: hidden; /* Evita interacción cuando está oculto */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s; /* Delay para visibilidad */
+}
+
+.login-modal.active {
+    opacity: 1; /* Totalmente visible */
+    visibility: visible; /* Permitir interacción */
+    transform: translate(-50%, -50%) scale(1); /* Escala a tamaño normal */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Sin retraso */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: black;
+}
+
+.login-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff0000;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info span {
+    font-size: 18px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.logout-btn {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.logout-btn:hover {
+    background-color: rgb(255, 0, 0);
+    transition: background-color 0.3s;
+}
+
+/* Para los dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .header {
+        height: 50px; /* Ajustar para pantallas pequeñas si es necesario */
+    }
+
+    body {
+        padding-top: 50px; /* La misma altura que el navbar en móviles */
+    }
+}
+
+/* Fondo rojo cuando el usuario se desplace hacia abajo */
+.header.scrolled {
+    background-color: rgba(255, 0, 0, 0.8); /* Color rojo transparente */
+}
+
+.navbar a.scrolled {
+    color: white; /* Cambia el color del texto a blanco cuando la barra se vuelve roja */
+}
+
+/* Para el fondo rojo cuando el mouse pasa cerca */
+.header.scrolled, .header:hover {
+    background-color: rgba(255, 0, 0, 0.8); /* Rojo transparente */
+}
+
+.navbar a.scrolled, .navbar a:hover {
+    color: white; /* Cambiar color de texto a blanco */
+}

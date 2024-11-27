@@ -1,0 +1,78 @@
+/* Contenedor general para las tarjetas */
+.container {
+  display: flex;
+  gap: 20px; /* Espaciado entre elementos */
+  flex-wrap: wrap; /* Permite que los elementos se adapten en pantallas pequeñas */
+  justify-content: center; /* Centra el contenido */
+  margin-top: 100px; /* Aumenta aún más el espacio superior para mover las tarjetas más hacia abajo */
+  margin-bottom: 50px; /* Aumenta el espacio inferior para desplazar más hacia abajo */
+}
+
+/* Estilo de las tarjetas */
+.persona {
+  background-color: rgba(255, 0, 0, 0.5); /* Rojo con 50% de transparencia */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra con sintaxis correcta */
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+  width: 100%; /* Asegura que la tarjeta ocupe el 100% del contenedor en pantallas pequeñas */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.persona:hover {
+  transform: scale(1.05); /* Efecto de zoom */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Sombra más fuerte al hacer hover */
+}
+
+/* Estilo de las imágenes dentro de las tarjetas */
+.persona-image {
+  border-radius: 50%; /* Imagen en forma circular */
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* Asegura que la imagen no se deforme */
+  margin-bottom: 15px;
+}
+
+/* Enlaces dentro de las tarjetas */
+.persona-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.persona-link:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries para hacer la sección más responsiva */
+@media screen and (max-width: 1024px) {
+  /* Ajustes para pantallas de tabletas */
+  .persona {
+    max-width: 250px; /* Reducir el tamaño máximo de las tarjetas en tabletas */
+    padding: 15px; /* Reducir el padding en pantallas más pequeñas */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Ajustes para pantallas móviles grandes */
+  .persona {
+    max-width: 200px; /* Reducir aún más el tamaño de las tarjetas */
+    padding: 10px; /* Reducir el padding */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Ajustes para pantallas móviles pequeñas */
+  .persona {
+    max-width: 100%; /* Hacer las tarjetas de ancho completo en móviles */
+    padding: 10px 5px; /* Reducir padding */
+  }
+
+  .persona-image {
+    width: 80px; /* Reducir el tamaño de la imagen en móviles pequeños */
+    height: 80px; /* Reducir el tamaño de la imagen en móviles pequeños */
+  }
+}

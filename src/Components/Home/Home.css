@@ -1,0 +1,102 @@
+/* Estilos generales de la página */
+.home-container {
+  padding: 40px;
+  font-family: 'Roboto', sans-serif; /* Fuente futurista */
+  background-color: transparent; /* Fondo oscuro para resaltar el texto blanco */
+  color: white; /* Color de texto blanco */
+}
+
+/* Banner principal */
+.banner {
+  text-align: left; /* Alineación a la izquierda */
+  margin-bottom: 40px;
+}
+
+.banner h1 {
+  font-size: 28px;
+  letter-spacing: 2px; /* Espaciado entre las letras para un estilo más futurista */
+}
+
+.banner p {
+  font-size: 16px;
+  color: #ccc;
+  letter-spacing: 1px; /* Espaciado entre las letras */
+  line-height: 1.6;
+}
+
+/* Estilos para la sección de Misión y Visión */
+.presentation {
+  text-align: left; /* Alineación a la izquierda */
+}
+
+.presentation h2 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif; /* Fuente robótica para los títulos */
+  letter-spacing: 2px; /* Mayor espaciado en los títulos */
+  text-transform: uppercase; /* Títulos en mayúsculas */
+  font-weight: 600; /* Negrita */
+}
+
+.presentation p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: none;
+  transition: opacity 1s ease-out;
+  font-family: 'Roboto Mono', monospace; /* Fuente monoespaciada para un toque robótico */
+  letter-spacing: 1.5px; /* Espaciado entre letras */
+}
+
+/* Animación de "escritura" */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Activación de la animación cuando se hace visible */
+.presentation p.visible {
+  opacity: 1;
+  animation: typing 4s steps(40) forwards;
+}
+
+/* Media Queries para mejorar la responsividad */
+@media screen and (max-width: 1024px) {
+  .banner h1 {
+    font-size: 24px;
+  }
+
+  .banner p {
+    font-size: 14px;
+  }
+
+  .presentation h2 {
+    font-size: 20px;
+  }
+
+  .presentation p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner h1 {
+    font-size: 20px;
+  }
+
+  .presentation h2 {
+    font-size: 18px;
+  }
+
+  .presentation p {
+    font-size: 12px;
+  }
+}
